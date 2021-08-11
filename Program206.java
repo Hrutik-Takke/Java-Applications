@@ -1,0 +1,46 @@
+
+/////////////////////////////////////////////////////////////////////////////////
+//  
+//  Function Name : CapCount()
+//  Input: string
+//  Output: Integer
+//  Description : Accept a string from user and count the number of Capital letter in a String.
+//  Date: 11/08/2021
+//  Author: Hrutik Takke
+//
+///////////////////////////////////////////////////////////////////////////////
+ 
+import java.util.*;
+
+class StringX
+{
+	public int CapCount(String str)
+	{
+		char arr[] = str.toCharArray();
+		int iCnt = 0;
+		for(int i = 0; i< arr.length; i++)
+		{
+			if((arr[i] >= 'A') && (arr[i] <= 'Z'))
+			{
+				iCnt++;
+			}
+		}
+		return iCnt;
+	}
+}
+
+class Program206
+{
+	public static void main(String arg[])
+	{
+		Scanner sobj = new Scanner(System.in);
+		
+		System.out.println("Please enter string");
+		
+		String str = sobj.nextLine();
+
+		StringX obj = new StringX();
+		int iRet = obj.CapCount(str);
+		System.out.println("Number of capital letters are : "+iRet);		
+	}
+}
